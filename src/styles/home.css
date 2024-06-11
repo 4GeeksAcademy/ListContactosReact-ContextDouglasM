@@ -1,3 +1,37 @@
 body{
-    background-image: url("https://www.premier.org.uk/wp-content/uploads/2021/01/Contact-us-1-1920x1080.jpg");
+    background-image: url("https://w.forfun.com/fetch/6b/6b15c5f640a7d5ae363dd98e875c8352.jpeg");
+    background-size: cover; 
+    background-position: center; 
 }
+
+.botones {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #333333;
+  }
+  
+  .boton4 {
+    color: rgba(255, 253, 253, 0.9) !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background-image: url("https://www.pinar.com.ar/resources/users-uploads/galleries/253/noticias/pinar13.jpg");
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+    position: relative;
+  }
+  .boton4:hover {
+    background-image: none;
+    background-color: white;
+    color: rgb(9, 15, 97) !important;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+    transition: all 0.2s ease;
+  }
+  
+

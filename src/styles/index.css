@@ -4,3 +4,34 @@
     border-radius: 50%;
     margin-left: 40px;
 }
+
+  .concept-five {
+	background: url(https://www.pinar.com.ar/resources/users-uploads/galleries/253/noticias/pinar13.jpg)
+		center center / cover;
+	display: flex;
+	align-items: center;
+	.word {
+        color: aliceblue;
+		width: 600px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100px;
+		&:hover {
+			.char:nth-child(even) {
+				top: 20px;
+			}
+			.char:nth-child(odd) {
+				top: -20px;
+			}
+		}
+	}
+	.char {
+		flex: 1;
+		position: relative;
+		display: inline-block;
+		top: 0;
+		transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+}

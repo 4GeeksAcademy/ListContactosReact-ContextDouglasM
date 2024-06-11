@@ -20,6 +20,10 @@ const ListContact = () => {
         }
     };
 
+    const deleteContact = (id) => {
+        setContacts(contacts.filter(contact => contact.id !== id));
+    };
+
     useEffect(() => {
         getContacts();
     }, []);
@@ -28,13 +32,13 @@ const ListContact = () => {
         <div>
             <div>
                 {contacts.map(contact => {
-                    return <Contact name={contact.name} address={contact.address} phone={contact.phone} email={contact.email} />;
+                    return <Contact key={contact.id} id={contact.id} name={contact.name} address={contact.address} phone={contact.phone} email={contact.email} onDelete={deleteContact} />;
                 })}
             </div>
             <Link to="/"> Regresa a la Pagina principal</Link>
         </div>
-
     );
 };
 
 export default ListContact;
+

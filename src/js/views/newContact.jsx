@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Contact = () => {
+const NewContact = () => {
     const [contactName, setContactName] = useState('');
     const [contactEmail, setContactEmail] = useState('');
     const [contactPhone, setContactPhone] = useState('');
     const [contactAddress, setContactAddress] = useState('');
     const [contacts, setContacts] = useState([]);
+    
 
     const addContact = async () => {
         const body = {
@@ -33,9 +34,10 @@ const Contact = () => {
     };
 
     return (
+        
         <div className='ms-5 me-5'>
             <div>
-                <h1>Contact</h1>
+                <h1>Create Contact</h1>
             </div>
             <form>
                 <div className="mb-3">
@@ -63,7 +65,7 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default NewContact;
 
 
 
