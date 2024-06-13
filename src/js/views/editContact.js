@@ -16,10 +16,10 @@ const EditContact = () => {
     });
 
     const handleChange = (event) => {
-        const { atributo, value } = event.target;
+        const { name, value } = event.target;
         setContacto({
             ...contacto,
-            [atributo]: value
+            [name]: value
         });
     };
 
@@ -42,65 +42,64 @@ const EditContact = () => {
 
     return (
         <div className='ms-5 me-5'>
-            <div>
-                <h1>Editar Contacto</h1>
+            <div className="letrasCrearContacto1 d-flex justify-content-center">
+                <p>Edit Contact</p>
             </div>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="fullName" className="form-label">Nombre Completo</label>
                     <input
                         type="text"
                         name="name"
                         value={contacto.name}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control letrasCrearContacto3 input"
                         id="fullName"
                         placeholder='Nombre Completo'
                     />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="email" className="form-label">Email</label>
                     <input
                         type="text"
                         name="email"
                         value={contacto.email}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control letrasCrearContacto3 input"
                         id="email"
                         placeholder='Email'
                     />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="phone" className="form-label">Teléfono</label>
                     <input
                         type="text"
                         name="phone"
                         value={contacto.phone}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control letrasCrearContacto3 input"
                         id="phone"
                         placeholder='Teléfono'
                     />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="address" className="form-label">Dirección</label>
                     <input
                         type="text"
                         name="address"
                         value={contacto.address}
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control letrasCrearContacto3 input"
                         id="address"
                         placeholder='Dirección'
                     />
                 </div>
-                <div>
-                    <button type="submit" className="btn btn-primary w-100">Guardar</button>
+                <div className='d-flex justify-content-center m-5'>
+                    <button type="submit" className="boton3 me-5">Save</button>
+                    <Link to="/listContact"><button className="boton3 ms-5">Back to contacts</button></Link>
                 </div>
-                <Link to="/">o volver a los contactos</Link>
             </form>
         </div>
     );
 };
-
 export default EditContact;

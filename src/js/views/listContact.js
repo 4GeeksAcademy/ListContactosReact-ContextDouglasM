@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Contact from "./Contact.jsx";
+import Contact from "../component/Contact.js";
 import { Link } from "react-router-dom";
 
 const ListContact = () => {
@@ -35,7 +35,9 @@ const ListContact = () => {
                     return <Contact key={contact.id} id={contact.id} name={contact.name} address={contact.address} phone={contact.phone} email={contact.email} onDelete={deleteContact} />;
                 })}
             </div>
-            <Link to="/"> Regresa a la Pagina principal</Link>
+            <div className="d-flex justify-content-center">
+                <Link to="/"><button className="boton2"> Regresar a Lista de Contatos </button></Link>
+            </div>
         </div>
     );
 };

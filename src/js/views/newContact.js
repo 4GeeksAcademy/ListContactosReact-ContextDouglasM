@@ -36,30 +36,31 @@ const NewContact = () => {
     return (
         
         <div className='ms-5 me-5'>
-            <div>
-                <h1>Create Contact</h1>
+            <div className='letrasCrearContacto1 d-flex justify-content-center'>
+                <p>Create Contact</p>
             </div>
             <form>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="fullName" className="form-label">Full Name</label>
-                    <input type="text" value={contactName} onChange={(e) => setContactName(e.target.value)} className="form-control" id="fullName" placeholder='Full Name' />
+                    <input type="text" value={contactName} onChange={(e) => setContactName(e.target.value)} className="form-control letrasCrearContacto3 input" id="fullName" placeholder='Full Name' />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input type="text" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} className="form-control" id="email" placeholder='Enter Email' />
+                    <input type="email" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} className="form-control letrasCrearContacto3 input" id="email" placeholder='Enter Email' />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="phone" className="form-label">Phone</label>
-                    <input type="text" value={contactPhone} onChange={(e) => setContactPhone(e.target.value)} className="form-control" id="phone" placeholder='Enter Phone' />
+                    <input type="number" value={contactPhone} onChange={(e) => setContactPhone(e.target.value)} className="form-control letrasCrearContacto3 input" id="phone" placeholder='Enter Phone' />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 letrasCrearContacto2">
                     <label htmlFor="address" className="form-label">Address</label>
-                    <input type="text" value={contactAddress} onChange={(e) => setContactAddress(e.target.value)} className="form-control" id="address" placeholder='Enter Address' />
+                    <input type="text" value={contactAddress} onChange={(e) => setContactAddress(e.target.value)} className="form-control letrasCrearContacto3 input" id="address" placeholder='Enter Address' />
                 </div>
-                <div>
-                    <button onClick={addContact} className="btn btn-primary w-100">Save</button>
+                <div className='d-flex justify-content-center m-5'>
+                    <button onClick={addContact} className="boton3 me-5">Save</button>
+                    <Link to="/listContact"><button className="boton3 ms-5">Back to contacts</button></Link>
                 </div>
-                <Link to="/">or get back to contacts</Link>
+                
             </form>
         </div>
     );

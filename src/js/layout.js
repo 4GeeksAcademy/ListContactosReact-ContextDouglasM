@@ -1,17 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import NewContact from "./views/newContact.jsx";
-import ListContact from "./views/listContact.jsx";
-import EditContact from "./views/editContact.jsx";
+import NewContact from "./views/newContact.js";
+import ListContact from "./views/listContact.js";
+import EditContact from "./views/editContact.js";
 
 //create your first component
 const Layout = () => {

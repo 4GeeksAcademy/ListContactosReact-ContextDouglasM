@@ -1,0 +1,16 @@
+.tarjetaContacto{
+    background-color: rgba(187, 209, 250, 0.582);
+    box-shadow: 0 10px 60px rgb(255, 255, 255);
+    border: solid 5px white;
+}
+
+.letrasContacto1{
+    font-size: 90px;
+}
+.letrasContacto2{
+    font-size: 30px;
+}
+
+.uppercase-input {
+    text-transform: uppercase;
+}

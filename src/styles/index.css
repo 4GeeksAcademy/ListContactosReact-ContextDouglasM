@@ -1,32 +1,35 @@
-.imgPerfil{
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    margin-left: 40px;
-}
 
-  .concept-five {
-	background: url(https://www.pinar.com.ar/resources/users-uploads/galleries/253/noticias/pinar13.jpg)
-		center center / cover;
+.concept-five {
+	background: url(https://i.pinimg.com/originals/d0/0e/f2/d00ef2e54de196caaf4ee3eb56be010c.jpg) center center / cover;
 	display: flex;
 	align-items: center;
+	height: 250px;
+	letter-spacing: 10px;
+	box-shadow: 0 10px 60px rgb(0, 69, 158);
+	
+
 	.word {
-        color: aliceblue;
+		font-size: 100px;
+		font-family: "Homer Simpson UI";
+		color: rgb(4, 62, 114);
 		width: 600px;
 		margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100px;
+
 		&:hover {
 			.char:nth-child(even) {
 				top: 20px;
 			}
+
 			.char:nth-child(odd) {
 				top: -20px;
 			}
 		}
 	}
+
 	.char {
 		flex: 1;
 		position: relative;
