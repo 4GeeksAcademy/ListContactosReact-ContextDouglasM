@@ -16,7 +16,7 @@ const NewContact = () => {
             email: contactEmail,
             address: contactAddress,
         };
-
+    
         try {
             const response = await fetch("https://playground.4geeks.com/contact/agendas/Douglas/contacts", {
                 method: "POST",
@@ -26,12 +26,18 @@ const NewContact = () => {
                 },
                 body: JSON.stringify(body)
             });
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
             const data = await response.json();
             setContacts([...contacts, data]);
+            clearForm();
         } catch (error) {
-            console.log(error);
+            console.error('Error adding contact:', error);
         }
     };
+    
 
     return (
         

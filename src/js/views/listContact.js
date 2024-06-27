@@ -12,9 +12,10 @@ const ListContact = () => {
                 headers: {
                     "accept": "application/json",
                 },
-            })
+            });
             const data = await response.json();
-            setContacts(data.contacts);
+            // Verifica si data.contacts es un array antes de establecer el estado
+            setContacts(Array.isArray(data.contacts) ? data.contacts : []);
         } catch (error) {
             console.error(error);
         }
@@ -31,16 +32,23 @@ const ListContact = () => {
     return (
         <div>
             <div>
-                {contacts.map(contact => {
-                    return <Contact key={contact.id} id={contact.id} name={contact.name} address={contact.address} phone={contact.phone} email={contact.email} onDelete={deleteContact} />;
-                })}
+                {contacts.map(contact => (
+                    <Contact 
+                        key={contact.id} 
+                        id={contact.id} 
+                        name={contact.name} 
+                        address={contact.address} 
+                        phone={contact.phone} 
+                        email={contact.email} 
+                        onDelete={deleteContact} 
+                    />
+                ))}
             </div>
             <div className="d-flex justify-content-center">
-                <Link to="/"><button className="boton2"> Regresar a Lista de Contatos </button></Link>
+                <Link to="/"><button className="boton2"> Regresar a Lista de Contactos </button></Link>
             </div>
         </div>
     );
 };
 
 export default ListContact;
-
